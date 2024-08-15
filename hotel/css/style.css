@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -17,12 +17,16 @@ header {
     justify-content: center;
 }
 
-.layoutGrid{
+.layoutGrid {
     /* border: 1px solid black; */
     width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.topContentHeader{
+.topContentHeader {
     /* border: 1px solid black;     */
     height: 80px;
     display: flex;
@@ -31,7 +35,7 @@ header {
     width: 100%;
 }
 
-.linksAndButtonHeader{
+.linksAndButtonHeader {
     /* border: 1px solid black; */
     width: 400px;
     height: 100%;
@@ -40,7 +44,7 @@ header {
     align-items: center;
 }
 
-.linksAndButtonHeader button{
+.linksAndButtonHeader button {
     width: 151px;
     height: 35px;
     border-radius: 8px;
@@ -54,7 +58,7 @@ header {
     background-color: transparent;
 }
 
-.linksHeader{
+.linksHeader {
     /* border: 1px solid black; */
     width: 200px;
 
@@ -63,15 +67,38 @@ header {
     align-items: center;
 }
 
- .linksHeader a{
-    font-family: "Lato_regular";
+.linksHeader a {
+    font-family: "lato_regular";
     font-weight: 500;
     text-decoration: none;
     color: white;
     font-size: 14px;
 }
 
-.lowerContentHeader{
-    border: 1px solid white;
+.lowerContentHeader {
+    /* border: 1px solid white; */
+    width: 100%;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textContentHeader {
+    /* border: 1px solid black; */
+}
+
+.textContentHeader h1 {
+    color: white;
+    font-family: "lato_regular";
+    font-weight: 600;
+    font-size: 28px;
+
+    margin-bottom: 15px;
+}
+
+.textContentHeader p {
+    color: white;
+    font-family: "lato_regular";
+    font-weight: 400;  
+    font-size: 18px; 
 }
