@@ -15,6 +15,7 @@ header {
     background-image: linear-gradient(#1E52B4, #002777);
     display: flex;
     justify-content: center;
+    z-index: -1;
 }
 
 .layoutGrid {
@@ -99,6 +100,112 @@ header {
 .textContentHeader p {
     color: white;
     font-family: "lato_regular";
-    font-weight: 400;  
-    font-size: 18px; 
+    font-weight: 400;
+    font-size: 18px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.travelOptions {
+    height: 80px;
+    width: 942px;
+    position: relative;
+    z-index: 99;
+    top: -40px;
+    padding: 0px 55px 0px 55px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 8px;
+    background-color: white;
+
+    box-shadow: 0px 6px 7px 7px rgba(0, 0, 0, 0.15);
+}
+
+.travelOptions button{
+    height: 45px;
+    width: 160px;
+    border-radius: 8px;
+
+    font-family: "lato_regular";
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
+    border: none;
+    background-color: #009C3B;
+}
+
+.inputTravelOptions{
+    border: none;
+    outline: none;
+    width: 130px;
+    margin:4px 0px 0px 10px;
+    
+}
+
+.inputTravelOptions::placeholder {
+    font-family: "lato_regular";
+    font-weight: 500;
+    font-size: 16px;
+    color: #5F5C6B;
+}
+
+.contentImgInput{
+    display: flex;
+    align-items: center;
+
+    height: 22px;
+    width: min-content;
+    /* border: 1px solid black; */
+}
+
+.line{
+    height:45px;
+    border: 2px dashed #4E4B59;
+}
+
+.contentCardHotel{
+    height: min-content;
+    width: 100%;
+    /* border: 1px solid black; */
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    margin-bottom: 200px;
+}
+
+.cardHotel{
+    width: 260px;
+    height: 300px;
+}
+
+.imgCard{
+    height: 173px;
+    width: 100%;
+
+    border-radius: 8px;
+}
+
+.titleCard{
+
+    font-family: "lato_regular";
+    font-weight: 600;
+    font-size: 16px;
+    color: #2E2636;
+
+    margin: 10px 0px 11px 0px;
+}
+
+.pCard{
+    font-family: "lato_regular";
+    font-weight: 400;
+    font-size: 12px;
+    color: #33303E;
 }

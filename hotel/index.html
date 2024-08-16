@@ -4,11 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hotel</title>
     <link rel="stylesheet" href="./css/style.css">
+
+    <script>
+        const locations = ['Angra dos reis', 'Arraial do cabo', 'Treze tílias', 'Ipanema']
+        const descriptionLocations = ['Desfrute de um paraíso tropical em nossa pousada! Relaxe em nossas piscinas com vista para o mar.', 'Conecte-se com a natureza em Arraial do Cabo! Nossa pousada está localizada próximo às praias.', 'Viva a experiência de um vilarejo europeu no Brasil! Nossa pousada em Treze Tílias é perfeita.', 'Explore a rica cultura e história de Ipanema! Nossa pousada é o ponto de partida ideal para conhecer.']
+        const imgLocations = ['angra.jpg', 'arraial.png', 'ipanema.jpg', 'treze.jpg']
+
+        function generateCard() {
+            for (let index = 0; index < 2; index++) {
+
+                for (let index = 0; index < 4 ; index++) {
+
+                    var div = document.createElement("div");
+                    div.className = "cardHotel"
+                    var img = document.createElement("img");
+                    img.src = `./assets/img/${imgLocations[index]}`
+                    img.className = "imgCard"
+
+                    var title = document.createElement("h3");
+                    title.className = "titleCard"
+                    var p = document.createElement("p");
+                    p.className = "pCard"
+
+                    var textTitle = document.createTextNode(locations[index]);
+                    var textP = document.createTextNode(descriptionLocations[index]);
+
+                    title.appendChild(textTitle)
+                    p.appendChild(textP)
+                    div.appendChild(img)
+                    div.appendChild(title)
+                    div.appendChild(p)
+                    
+
+                    document.getElementsByClassName("contentCardHotel")[0].appendChild(div)
+                }
+            }
+        }
+
+    </script>
 </head>
 
-<body>
+<body onload="generateCard()">
     <header>
         <div class="layoutGrid">
             <div class="topContentHeader">
@@ -16,7 +54,7 @@
                 <img src="./assets/img/logo-branca.png" alt="">
 
                 <div class="linksAndButtonHeader">
-                    
+
                     <nav class="linksHeader">
                         <a href="">Hotéis</a>
                         <a href="">Contato</a>
@@ -41,10 +79,30 @@
     </header>
 
     <main>
+        <div class="layoutGrid">
+            <div class="travelOptions">
+                <div class="contentImgInput">
+                    <img src="./assets/icon/local-icon.svg" alt="">
+                    <input class="inputTravelOptions" type="text" placeholder="Qual o local desejado?">
+                </div>
+                <hr class="line">
+                <div class="contentImgInput">
+                    <img src="./assets/icon/checkin-icon.svg" alt="">
+                    <input class="inputTravelOptions" type="text" placeholder="Data check in">
+                </div>
+                <hr class="line">
+                <div class="contentImgInput">
+                    <img src="./assets/icon/checkout-icon.svg" alt="">
+                    <input class="inputTravelOptions" type="text" placeholder="Data check out">
+                </div>
+                <hr class="line">
+                <button>Procurar hotel</button>
+            </div>
 
-            <section>
-                
+            <section class="contentCardHotel">
+
             </section>
+        </div>
     </main>
 
     <footer></footer>
