@@ -10,33 +10,49 @@
     <script>
         const locations = ['Angra dos reis', 'Arraial do cabo', 'Treze tílias', 'Ipanema']
         const descriptionLocations = ['Desfrute de um paraíso tropical em nossa pousada! Relaxe em nossas piscinas com vista para o mar.', 'Conecte-se com a natureza em Arraial do Cabo! Nossa pousada está localizada próximo às praias.', 'Viva a experiência de um vilarejo europeu no Brasil! Nossa pousada em Treze Tílias é perfeita.', 'Explore a rica cultura e história de Ipanema! Nossa pousada é o ponto de partida ideal para conhecer.']
+        const state = ['rj', 'rj', 'sc', 'rj']
         const imgLocations = ['angra.jpg', 'arraial.png', 'ipanema.jpg', 'treze.jpg']
 
         function generateCard() {
             for (let index = 0; index < 2; index++) {
 
-                for (let index = 0; index < 4 ; index++) {
+                for (let index = 0; index < 4; index++) {
 
                     var div = document.createElement("div");
                     div.className = "cardHotel"
+
                     var img = document.createElement("img");
                     img.src = `./assets/img/${imgLocations[index]}`
                     img.className = "imgCard"
 
+                    var divTitleState = document.createElement("div")
+                    divTitleState.className = "contentTitleState"
+
+                    var stateHotel = document.createElement("span");
+                    stateHotel.className = "stateCard"
+
                     var title = document.createElement("h3");
                     title.className = "titleCard"
+
                     var p = document.createElement("p");
                     p.className = "pCard"
 
                     var textTitle = document.createTextNode(locations[index]);
                     var textP = document.createTextNode(descriptionLocations[index]);
+                    var textState = document.createTextNode(state[index]);
 
                     title.appendChild(textTitle)
                     p.appendChild(textP)
+                    stateHotel.appendChild(textState)
+
+                    divTitleState.appendChild(title)
+                    divTitleState.appendChild(stateHotel)
+
                     div.appendChild(img)
-                    div.appendChild(title)
+                    div.appendChild(divTitleState)
                     div.appendChild(p)
                     
+
 
                     document.getElementsByClassName("contentCardHotel")[0].appendChild(div)
                 }
@@ -102,10 +118,35 @@
             <section class="contentCardHotel">
 
             </section>
+            <section class="lowerContentSection">
+                <div>
+                    <h1>
+                        Venha conferir os melhores <span class="spanBlue">hoteis</span> <br> com as melhores <span
+                            class="spanGreen">promoções</span> do país
+                    </h1>
+
+                    <p> <span class="spanGreen">Não perca tempo </span>e venha conferir o que há de <br> <span
+                            class="spanYellow">melhor</span> na hotelagem brasileira</p>
+                </div>
+                <img src="./assets/img/travel.png" alt="">
+            </section>
         </div>
     </main>
 
-    <footer></footer>
+    <footer>
+
+        <div class="topContentFooter">
+            <div class="contacts">
+                <h1>Fale com um de nossos acessores</h1>
+                <span>hospedagens@contato.com.br</span>
+                <span>(11) 0800-707-0707</span>
+            </div>
+        </div>
+
+        <div class="lowerContentFooter">
+            <img src="./assets/img/logo-preta.png" alt="">
+        </div>
+    </footer>
 </body>
 
 </html>
